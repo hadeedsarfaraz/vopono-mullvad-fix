@@ -45,7 +45,7 @@ impl Mullvad {
 
 impl OpenVpnProvider for Mullvad {
     fn provider_dns(&self) -> Option<Vec<IpAddr>> {
-        Some(vec![IpAddr::V4(Ipv4Addr::new(193, 138, 218, 74))])
+        Some(vec![IpAddr::V4(Ipv4Addr::new(10, 8, 0, 1))])
     }
 
     fn prompt_for_auth(&self, uiclient: &dyn UiClient) -> anyhow::Result<(String, String)> {
