@@ -248,7 +248,7 @@ impl WireguardProvider for Mullvad {
         debug!("Chosen keypair: {keypair:?}");
 
         // TODO: Hardcoded IP - can we scrape this anywhere?
-        let dns = std::net::Ipv4Addr::new(193, 138, 218, 74);
+        let dns = std::net::Ipv4Addr::new(10, 64, 0, 1);
         let interface = WireguardInterface {
             private_key: keypair.private.clone(),
             address: vec![ipv4_net, ipv6_net],
